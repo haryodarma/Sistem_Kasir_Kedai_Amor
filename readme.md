@@ -1,45 +1,45 @@
 <h1>Judul Proyek : </h1>
-<h3>Sistem Kasir Kedai Amor</h3>
+<p>Sistem Kasir Kedai Amor</p>
 
 <h1>Deskripsi Singkat : </h1>
-<h3>Membuat sistem kasir untuk sebuah kedai disebuah desa dengan tujuan mempermudah transaksi dan management</h3>
+<p>Membuat sistem kasir untuk sebuah kedai disebuah desa dengan tujuan mempermudah transaksi dan management</p>
 
 <h1>Cara Menjalankan Sistem : </h1>
 <h2>A. Setup Project</h2>
-<h3>1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project. ex: git clone http://github.com/</h3>
-<h3>2. Buka project di vs code</h3>
-<h3>3. Buka terminal di vs code</h3>
-<h3>4. Pindah ke folder frontend</h3>
-<h3>5. Install package di folder frontend. ex: pnpm run dev (sesuiakan dengan package manager yang anda gunakan)</h3>
-<h3>6. Pindah ke folder backend</h3>
-<h3>7. Install package di folder backend. ex: composer install</h3>
-<h3>8. Buat file .env</h3>
-<h3>9. Copy semua isi file di .env.example</h3>
-<h3>10. Paste ke dalam file .env</h3>
-<h3>11. Sesuaikan variable Database dengan database yang anda gunakan</h3>
-<h3>12. Jalankan "php artisan jwt:secret" untuk generate key jwt</h3>
-<h3>13. Jalankan "php artisan storage:link" untuk menghubungkan folder /storage/public ke folder /public</h3>
-<h3>14. Jalankan backend dengan "php artisan serve" di folder backend</h3>
-<h3>15. Jalankan frontend dengan "pnpm run dev" di folder frontend</h3>
+<p>1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project. ex: git clone http://github.com/</p>
+<p>2. Buka project di vs code</p>
+<p>3. Buka terminal di vs code</p>
+<p>4. Pindah ke folder frontend</p>
+<p>5. Install package di folder frontend. ex: pnpm run dev (sesuiakan dengan package manager yang anda gunakan)</p>
+<p>6. Pindah ke folder backend</p>
+<p>7. Install package di folder backend. ex: composer install</p>
+<p>8. Buat file .env</p>
+<p>9. Copy semua isi file di .env.example</p>
+<p>10. Paste ke dalam file .env</p>
+<p>11. Sesuaikan variable Database dengan database yang anda gunakan</p>
+<p>12. Jalankan "php artisan jwt:secret" untuk generate key jwt</p>
+<p>13. Jalankan "php artisan storage:link" untuk menghubungkan folder /storage/public ke folder /public</p>
+<p>14. Jalankan backend dengan "php artisan serve" di folder backend</p>
+<p>15. Jalankan frontend dengan "pnpm run dev" di folder frontend</p>
 
 <h2>B. Sistem Customer</h2>
-<h3>1. Tekan button mulai untuk masuk ke bagian customer</h3>
-<h3>2. Tambahkan beberapa product ke bagian order</h3>
-<h3>3. Lakukan checkout</h3>
+<p>1. Tekan button mulai untuk masuk ke bagian customer</p>
+<p>2. Tambahkan beberapa product ke bagian order</p>
+<p>3. Lakukan checkout</p>
 
 <h2>C. Sistem Admin (CMS)</h2>
-<h3>1. Tekan button login</h3>
-<h3>2. Masukan username dan password yang sudah terdaftar</h3>
-<h3>3. Pada bagian sidebar ada beberapa menu seperti bagian transaksi, bagian product, dan bagian lainnya</h3>
-<h3>4. Pada setiap sub bagian didalamnya telah disediakan table yang berisi data dan button add, update dan delete</h3>
+<p>1. Tekan button login</p>
+<p>2. Masukan username dan password yang sudah terdaftar</p>
+<p>3. Pada bagian sidebar ada beberapa menu seperti bagian transaksi, bagian product, dan bagian lainnya</p>
+<p>4. Pada setiap sub bagian didalamnya telah disediakan table yang berisi data dan button add, update dan delete</p>
 
 <h2>D. Catatan</h2>
-<h3>1. Pada bagian transaksi user hanya dapat melakukan update status transaksi untuk keamanan bahwa transaksi yang telah terjadi tidak dapat dihapus dan diubah</h3>
+<p>1. Pada bagian transaksi user hanya dapat melakukan update status transaksi untuk keamanan bahwa transaksi yang telah terjadi tidak dapat dihapus dan diubah</p>
 
 <h1>Informasi Akun Uji Coba :</h1>
 <h2>Login sebagain admin</h2>
-<h3>Username : owner</h3>
-<h3>Password : password</h3>
+<p>Username : owner</p>
+<p>Password : password</p>
 
 <h1>Dokumentasi API :</h1>
-<h3>Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut http://localhost:3000</h3>
+<p>Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut http://localhost:3000</p>
