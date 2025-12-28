@@ -6,7 +6,7 @@
 
 <h1>Cara Menjalankan Sistem : </h1>
 <h2>A. Setup Project</h2>
-<p>1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project. ex: git clone http://github.com/</p>
+<p>1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project. ex: git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git</p>
 <p>2. Buka project di vs code</p>
 <p>3. Buka terminal di vs code</p>
 <p>4. Pindah ke folder frontend</p>
