@@ -13,13 +13,9 @@ return new class extends Migration {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id("recipe_id");
             $table->integer("recipe_qty");
-            $table->enum("recipe_unit", ["KG", "GRAM", "LITER", "ML"]);
             $table->unsignedBigInteger("product_id");
             $table->unsignedBigInteger("raw_id");
             $table->timestamps();
-
-            // $table->primary("recipe_id");
-
         });
     }
 

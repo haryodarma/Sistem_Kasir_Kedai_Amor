@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id("raw_id");
             $table->string("raw_name");
             $table->integer("raw_stock");
-            $table->enum("raw_unit", ["KG", "GRAM", "LITER", "ML"]);
+            $table->enum("raw_unit", ["gr", "ml"]);
             $table->timestamps();
             $table->softDeletes();
         });

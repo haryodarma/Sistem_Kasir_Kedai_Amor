@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id("item_id");
             $table->unsignedBigInteger("product_id");
             $table->unsignedBigInteger("transaction_id");
+            $table->integer("item_qty");
             $table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id("transaction_id");
             $table->integer("transaction_total");
             $table->integer("transaction_discount");
-            $table->enum("transaction_status", ["pending", "completed", "cancelled"])->default("pending");
+            $table->enum("transaction_status", ["pending", "paid", "cancelled"])->default("pending");
             $table->unsignedBigInteger("user_id")->nullable();
             $table->timestamps();
 
