@@ -1,0 +1,2334 @@
+{
+	"info": {
+		"_postman_id": "b2f60cb7-3fa6-4ef5-997a-e2179c19f775",
+		"name": "Amore Cashier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33379055"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/categories"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:10:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"category_id\": 1,\n                \"category_name\": \"Beverages\"\n            },\n            {\n                \"category_id\": 2,\n                \"category_name\": \"Snacks\"\n            },\n            {\n                \"category_id\": 3,\n                \"category_name\": \"Desserts\"\n            },\n            {\n                \"category_id\": 5,\n                \"category_name\": \"Test\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/categories?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/categories?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/categories?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/categories\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 4,\n        \"total\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/categories/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/categories/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:10:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_id\": 1,\n        \"category_name\": \"Beverages\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:10:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_name\": \"Coffee\",\n        \"category_id\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Food",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:10:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_id\": 1,\n        \"category_name\": \"Food\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:11:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Deleted Successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/recipes"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/recipes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:12:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"recipe_id\": 1,\n                \"recipe_qty\": 3,\n                \"product_id\": 7,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 7,\n                    \"product_name\": \"Es Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 10000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 2,\n                \"recipe_qty\": 108,\n                \"product_id\": 5,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 5,\n                    \"product_name\": \"Es Kopi Susu\",\n                    \"product_image\": \"/images/logo.png\",\n                    \"product_price\": 18000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 3,\n                \"recipe_qty\": 280,\n                \"product_id\": 3,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 3,\n                    \"product_name\": \"Kopi Hitam\",\n                    \"product_image\": \"/images/coffee1.png\",\n                    \"product_price\": 15000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 4,\n                \"recipe_qty\": 88,\n                \"product_id\": 7,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 7,\n                    \"product_name\": \"Es Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 10000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 5,\n                \"recipe_qty\": 480,\n                \"product_id\": 7,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 7,\n                    \"product_name\": \"Es Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 10000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 7,\n                \"recipe_qty\": 307,\n                \"product_id\": 6,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 6,\n                    \"product_name\": \"Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 8000,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 8,\n                \"recipe_qty\": 83,\n                \"product_id\": 8,\n                \"raw_id\": 2,\n                \"product\": {\n                    \"product_id\": 8,\n                    \"product_name\": \"Coklat Panas\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 13000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 2,\n                    \"raw_name\": \"Kopi Bubuk\",\n                    \"raw_stock\": 9109,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 9,\n                \"recipe_qty\": 284,\n                \"product_id\": 2,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 2,\n                    \"product_name\": \"Kopi Hitam Updated\",\n                    \"product_image\": \"/storage/products/2.png\",\n                    \"product_price\": 12002,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 12,\n                \"recipe_qty\": 435,\n                \"product_id\": 8,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 8,\n                    \"product_name\": \"Coklat Panas\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 13000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 13,\n                \"recipe_qty\": 113,\n                \"product_id\": 2,\n                \"raw_id\": 2,\n                \"product\": {\n                    \"product_id\": 2,\n                    \"product_name\": \"Kopi Hitam Updated\",\n                    \"product_image\": \"/storage/products/2.png\",\n                    \"product_price\": 12002,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 2,\n                    \"raw_name\": \"Kopi Bubuk\",\n                    \"raw_stock\": 9109,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 14,\n                \"recipe_qty\": 348,\n                \"product_id\": 6,\n                \"raw_id\": 4,\n                \"product\": {\n                    \"product_id\": 6,\n                    \"product_name\": \"Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 8000,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 4,\n                    \"raw_name\": \"Teh Hitam\",\n                    \"raw_stock\": 4214,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 16,\n                \"recipe_qty\": 412,\n                \"product_id\": 8,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 8,\n                    \"product_name\": \"Coklat Panas\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 13000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 17,\n                \"recipe_qty\": 32,\n                \"product_id\": 3,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 3,\n                    \"product_name\": \"Kopi Hitam\",\n                    \"product_image\": \"/images/coffee1.png\",\n                    \"product_price\": 15000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 18,\n                \"recipe_qty\": 265,\n                \"product_id\": 2,\n                \"raw_id\": 2,\n                \"product\": {\n                    \"product_id\": 2,\n                    \"product_name\": \"Kopi Hitam Updated\",\n                    \"product_image\": \"/storage/products/2.png\",\n                    \"product_price\": 12002,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 2,\n                    \"raw_name\": \"Kopi Bubuk\",\n                    \"raw_stock\": 9109,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 19,\n                \"recipe_qty\": 161,\n                \"product_id\": 5,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 5,\n                    \"product_name\": \"Es Kopi Susu\",\n                    \"product_image\": \"/images/logo.png\",\n                    \"product_price\": 18000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 20,\n                \"recipe_qty\": 414,\n                \"product_id\": 5,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 5,\n                    \"product_name\": \"Es Kopi Susu\",\n                    \"product_image\": \"/images/logo.png\",\n                    \"product_price\": 18000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 21,\n                \"recipe_qty\": 12,\n                \"product_id\": 5,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 5,\n                    \"product_name\": \"Es Kopi Susu\",\n                    \"product_image\": \"/images/logo.png\",\n                    \"product_price\": 18000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 22,\n                \"recipe_qty\": 468,\n                \"product_id\": 4,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 4,\n                    \"product_name\": \"Es Kopi Susu\",\n                    \"product_image\": \"/storage/products/4.png\",\n                    \"product_price\": 15000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": true,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 23,\n                \"recipe_qty\": 314,\n                \"product_id\": 3,\n                \"raw_id\": 4,\n                \"product\": {\n                    \"product_id\": 3,\n                    \"product_name\": \"Kopi Hitam\",\n                    \"product_image\": \"/images/coffee1.png\",\n                    \"product_price\": 15000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 4,\n                    \"raw_name\": \"Teh Hitam\",\n                    \"raw_stock\": 4214,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 24,\n                \"recipe_qty\": 383,\n                \"product_id\": 7,\n                \"raw_id\": 4,\n                \"product\": {\n                    \"product_id\": 7,\n                    \"product_name\": \"Es Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 10000,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 1\n                },\n                \"raw\": {\n                    \"raw_id\": 4,\n                    \"raw_name\": \"Teh Hitam\",\n                    \"raw_stock\": 4214,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 35,\n                \"recipe_qty\": 12,\n                \"product_id\": 1,\n                \"raw_id\": 4,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 4,\n                    \"raw_name\": \"Teh Hitam\",\n                    \"raw_stock\": 4214,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 38,\n                \"recipe_qty\": 12,\n                \"product_id\": 1,\n                \"raw_id\": 4,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 4,\n                    \"raw_name\": \"Teh Hitam\",\n                    \"raw_stock\": 4214,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 39,\n                \"recipe_qty\": 2,\n                \"product_id\": 1,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 40,\n                \"recipe_qty\": 5,\n                \"product_id\": 1,\n                \"raw_id\": 2,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 2,\n                    \"raw_name\": \"Kopi Bubuk\",\n                    \"raw_stock\": 9109,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 41,\n                \"recipe_qty\": 8,\n                \"product_id\": 1,\n                \"raw_id\": 1,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 1,\n                    \"raw_name\": \"Gula Pasir\",\n                    \"raw_stock\": 17993,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 42,\n                \"recipe_qty\": 2,\n                \"product_id\": 1,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 43,\n                \"recipe_qty\": 2,\n                \"product_id\": 1,\n                \"raw_id\": 3,\n                \"product\": {\n                    \"product_id\": 1,\n                    \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                    \"product_image\": \"/storage/products/1.png\",\n                    \"product_price\": 10011,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 3,\n                    \"raw_name\": \"Coklat Bubuk\",\n                    \"raw_stock\": 5600,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 44,\n                \"recipe_qty\": 11,\n                \"product_id\": 10,\n                \"raw_id\": 2,\n                \"product\": {\n                    \"product_id\": 10,\n                    \"product_name\": \"Test Input\",\n                    \"product_image\": \"/storage/products/10.png\",\n                    \"product_price\": 10,\n                    \"product_size\": \"medium\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 2,\n                    \"raw_name\": \"Kopi Bubuk\",\n                    \"raw_stock\": 9109,\n                    \"raw_unit\": \"gr\"\n                }\n            },\n            {\n                \"recipe_id\": 45,\n                \"recipe_qty\": 133,\n                \"product_id\": 14,\n                \"raw_id\": 7,\n                \"product\": {\n                    \"product_id\": 14,\n                    \"product_name\": \"Test\",\n                    \"product_image\": \"/storage/products/14.png\",\n                    \"product_price\": 9999,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 7,\n                    \"raw_name\": \"Air Mineral\",\n                    \"raw_stock\": 49468,\n                    \"raw_unit\": \"ml\"\n                }\n            },\n            {\n                \"recipe_id\": 46,\n                \"recipe_qty\": 123,\n                \"product_id\": 14,\n                \"raw_id\": 5,\n                \"product\": {\n                    \"product_id\": 14,\n                    \"product_name\": \"Test\",\n                    \"product_image\": \"/storage/products/14.png\",\n                    \"product_price\": 9999,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 2\n                },\n                \"raw\": {\n                    \"raw_id\": 5,\n                    \"raw_name\": \"Es Batu\",\n                    \"raw_stock\": -2407,\n                    \"raw_unit\": \"gr\"\n                }\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/recipes?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/recipes?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/recipes?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/recipes?page=2\",\n                \"label\": \"2\",\n                \"page\": 2,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/recipes?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"page\": 2,\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8000/api/recipes?page=2\",\n        \"path\": \"http://127.0.0.1:8000/api/recipes\",\n        \"per_page\": 30,\n        \"prev_page_url\": null,\n        \"to\": 30,\n        \"total\": 32\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/recipes/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/recipes/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:12:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"recipe_id\": 1,\n        \"recipe_qty\": 3,\n        \"product_id\": 7,\n        \"raw_id\": 3,\n        \"raw\": {\n            \"raw_id\": 3,\n            \"raw_name\": \"Coklat Bubuk\",\n            \"raw_stock\": 5600,\n            \"raw_unit\": \"gr\"\n        },\n        \"product\": {\n            \"product_id\": 7,\n            \"product_name\": \"Es Teh Manis\",\n            \"product_image\": \"/images/food1.png\",\n            \"product_price\": 10000,\n            \"product_size\": \"medium\",\n            \"is_hot\": false,\n            \"is_active\": false,\n            \"category_id\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:12:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_name\": \"Coffee\",\n        \"category_id\": 7\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Food",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:12:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_id\": 1,\n        \"category_name\": \"Food\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/categories/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:13:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Deleted Successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/transactions"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/api/transactions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:14:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"transaction_id\": 35,\n                \"transaction_total\": 51000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-28T12:46:59.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 40,\n                        \"product_id\": 5,\n                        \"transaction_id\": 35,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 5,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/images/logo.png\",\n                            \"product_price\": 18000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 41,\n                        \"product_id\": 3,\n                        \"transaction_id\": 35,\n                        \"item_qty\": 1,\n                        \"products\": {\n                            \"product_id\": 3,\n                            \"product_name\": \"Kopi Hitam\",\n                            \"product_image\": \"/images/coffee1.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 34,\n                \"transaction_total\": 45000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T11:08:52.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 38,\n                        \"product_id\": 4,\n                        \"transaction_id\": 34,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 4,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/storage/products/4.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 2\n                        }\n                    },\n                    {\n                        \"item_id\": 39,\n                        \"product_id\": 3,\n                        \"transaction_id\": 34,\n                        \"item_qty\": 1,\n                        \"products\": {\n                            \"product_id\": 3,\n                            \"product_name\": \"Kopi Hitam\",\n                            \"product_image\": \"/images/coffee1.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 33,\n                \"transaction_total\": 4200000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T10:11:03.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 37,\n                        \"product_id\": 15,\n                        \"transaction_id\": 33,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 15,\n                            \"product_name\": \"Test Final\",\n                            \"product_image\": \"/storage/products/15.png\",\n                            \"product_price\": 2100000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 32,\n                \"transaction_total\": 45000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T10:07:16.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 36,\n                        \"product_id\": 4,\n                        \"transaction_id\": 32,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 4,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/storage/products/4.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 31,\n                \"transaction_total\": 39996,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T10:05:25.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 35,\n                        \"product_id\": 14,\n                        \"transaction_id\": 31,\n                        \"item_qty\": 4,\n                        \"products\": {\n                            \"product_id\": 14,\n                            \"product_name\": \"Test\",\n                            \"product_image\": \"/storage/products/14.png\",\n                            \"product_price\": 9999,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 30,\n                \"transaction_total\": 65000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T10:04:56.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 34,\n                        \"product_id\": 8,\n                        \"transaction_id\": 30,\n                        \"item_qty\": 5,\n                        \"products\": {\n                            \"product_id\": 8,\n                            \"product_name\": \"Coklat Panas\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 13000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 29,\n                \"transaction_total\": 24000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:53:43.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 33,\n                        \"product_id\": 6,\n                        \"transaction_id\": 29,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 28,\n                \"transaction_total\": 19998,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"cancelled\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:52:52.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 32,\n                        \"product_id\": 14,\n                        \"transaction_id\": 28,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 14,\n                            \"product_name\": \"Test\",\n                            \"product_image\": \"/storage/products/14.png\",\n                            \"product_price\": 9999,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 27,\n                \"transaction_total\": 99990,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:52:38.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 31,\n                        \"product_id\": 14,\n                        \"transaction_id\": 27,\n                        \"item_qty\": 10,\n                        \"products\": {\n                            \"product_id\": 14,\n                            \"product_name\": \"Test\",\n                            \"product_image\": \"/storage/products/14.png\",\n                            \"product_price\": 9999,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 26,\n                \"transaction_total\": 9999,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:51:38.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 30,\n                        \"product_id\": 14,\n                        \"transaction_id\": 26,\n                        \"item_qty\": 1,\n                        \"products\": {\n                            \"product_id\": 14,\n                            \"product_name\": \"Test\",\n                            \"product_image\": \"/storage/products/14.png\",\n                            \"product_price\": 9999,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 25,\n                \"transaction_total\": 181998,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:44:26.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 25,\n                        \"product_id\": 4,\n                        \"transaction_id\": 25,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 4,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/storage/products/4.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 2\n                        }\n                    },\n                    {\n                        \"item_id\": 26,\n                        \"product_id\": 5,\n                        \"transaction_id\": 25,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 5,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/images/logo.png\",\n                            \"product_price\": 18000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 27,\n                        \"product_id\": 6,\n                        \"transaction_id\": 25,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 28,\n                        \"product_id\": 8,\n                        \"transaction_id\": 25,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 8,\n                            \"product_name\": \"Coklat Panas\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 13000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 29,\n                        \"product_id\": 14,\n                        \"transaction_id\": 25,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 14,\n                            \"product_name\": \"Test\",\n                            \"product_image\": \"/storage/products/14.png\",\n                            \"product_price\": 9999,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 24,\n                \"transaction_total\": 117000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T09:37:38.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 22,\n                        \"product_id\": 6,\n                        \"transaction_id\": 24,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 23,\n                        \"product_id\": 8,\n                        \"transaction_id\": 24,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 8,\n                            \"product_name\": \"Coklat Panas\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 13000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 24,\n                        \"product_id\": 5,\n                        \"transaction_id\": 24,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 5,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/images/logo.png\",\n                            \"product_price\": 18000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 23,\n                \"transaction_total\": 63000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"cancelled\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T07:49:25.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 20,\n                        \"product_id\": 8,\n                        \"transaction_id\": 23,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 8,\n                            \"product_name\": \"Coklat Panas\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 13000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 21,\n                        \"product_id\": 6,\n                        \"transaction_id\": 23,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 22,\n                \"transaction_total\": 159000,\n                \"transaction_discount\": 0,\n                \"transaction_status\": \"paid\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-27T07:38:09.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 16,\n                        \"product_id\": 8,\n                        \"transaction_id\": 22,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 8,\n                            \"product_name\": \"Coklat Panas\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 13000,\n                            \"product_size\": \"medium\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 17,\n                        \"product_id\": 6,\n                        \"transaction_id\": 22,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 18,\n                        \"product_id\": 5,\n                        \"transaction_id\": 22,\n                        \"item_qty\": 2,\n                        \"products\": {\n                            \"product_id\": 5,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/images/logo.png\",\n                            \"product_price\": 18000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 19,\n                        \"product_id\": 4,\n                        \"transaction_id\": 22,\n                        \"item_qty\": 4,\n                        \"products\": {\n                            \"product_id\": 4,\n                            \"product_name\": \"Es Kopi Susu\",\n                            \"product_image\": \"/storage/products/4.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": true,\n                            \"category_id\": 2\n                        }\n                    }\n                ]\n            },\n            {\n                \"transaction_id\": 1,\n                \"transaction_total\": 184144,\n                \"transaction_discount\": 20,\n                \"transaction_status\": \"cancelled\",\n                \"user_id\": null,\n                \"created_at\": \"2025-12-26T09:06:13.000000Z\",\n                \"items\": [\n                    {\n                        \"item_id\": 1,\n                        \"product_id\": 9,\n                        \"transaction_id\": 1,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 9,\n                            \"product_name\": \"Coklat Dingin\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 15000,\n                            \"product_size\": \"large\",\n                            \"is_hot\": false,\n                            \"is_active\": false,\n                            \"category_id\": 1\n                        }\n                    },\n                    {\n                        \"item_id\": 2,\n                        \"product_id\": 2,\n                        \"transaction_id\": 1,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 2,\n                            \"product_name\": \"Kopi Hitam Updated\",\n                            \"product_image\": \"/storage/products/2.png\",\n                            \"product_price\": 12002,\n                            \"product_size\": \"large\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 2\n                        }\n                    },\n                    {\n                        \"item_id\": 3,\n                        \"product_id\": 6,\n                        \"transaction_id\": 1,\n                        \"item_qty\": 3,\n                        \"products\": {\n                            \"product_id\": 6,\n                            \"product_name\": \"Teh Manis\",\n                            \"product_image\": \"/images/food1.png\",\n                            \"product_price\": 8000,\n                            \"product_size\": \"small\",\n                            \"is_hot\": true,\n                            \"is_active\": true,\n                            \"category_id\": 1\n                        }\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/transactions?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/transactions?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/transactions?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/transactions?page=2\",\n                \"label\": \"2\",\n                \"page\": 2,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/transactions?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"page\": 2,\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8000/api/transactions?page=2\",\n        \"path\": \"http://127.0.0.1:8000/api/transactions\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 24\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/transactions/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/transactions/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:14:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"transaction_id\": 1,\n        \"transaction_total\": 184144,\n        \"transaction_discount\": 20,\n        \"transaction_status\": \"cancelled\",\n        \"user_id\": null,\n        \"created_at\": \"2025-12-26T09:06:13.000000Z\",\n        \"items\": [\n            {\n                \"item_id\": 1,\n                \"product_id\": 9,\n                \"transaction_id\": 1,\n                \"item_qty\": 3,\n                \"products\": {\n                    \"product_id\": 9,\n                    \"product_name\": \"Coklat Dingin\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 15000,\n                    \"product_size\": \"large\",\n                    \"is_hot\": false,\n                    \"is_active\": false,\n                    \"category_id\": 1\n                }\n            },\n            {\n                \"item_id\": 2,\n                \"product_id\": 2,\n                \"transaction_id\": 1,\n                \"item_qty\": 3,\n                \"products\": {\n                    \"product_id\": 2,\n                    \"product_name\": \"Kopi Hitam Updated\",\n                    \"product_image\": \"/storage/products/2.png\",\n                    \"product_price\": 12002,\n                    \"product_size\": \"large\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 2\n                }\n            },\n            {\n                \"item_id\": 3,\n                \"product_id\": 6,\n                \"transaction_id\": 1,\n                \"item_qty\": 3,\n                \"products\": {\n                    \"product_id\": 6,\n                    \"product_name\": \"Teh Manis\",\n                    \"product_image\": \"/images/food1.png\",\n                    \"product_price\": 8000,\n                    \"product_size\": \"small\",\n                    \"is_hot\": true,\n                    \"is_active\": true,\n                    \"category_id\": 1\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:14:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_name\": \"Coffee\",\n        \"category_id\": 8\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Food",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Food",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/categories/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:15:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"category_id\": 1,\n        \"category_name\": \"Food\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/4"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/categories/6"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:15:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Deleted Successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Raws",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/api/raws"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY1OTAxNTI5LCJleHAiOjE3NjU5MDUxMjksIm5iZiI6MTc2NTkwMTUyOSwianRpIjoidHdUV29YUU9rbTdCMmNMayIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SDxAH4vWpbDYFUyNhWvq-K9-1rU2vjNYq__CxMm3gXw",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/api/raws"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:16:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"raw_id\": 1,\n                \"raw_name\": \"Gula Pasir\",\n                \"raw_stock\": 17993,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 2,\n                \"raw_name\": \"Kopi Bubuk\",\n                \"raw_stock\": 9109,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 3,\n                \"raw_name\": \"Coklat Bubuk\",\n                \"raw_stock\": 5600,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 4,\n                \"raw_name\": \"Teh Hitam\",\n                \"raw_stock\": 4214,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 5,\n                \"raw_name\": \"Es Batu\",\n                \"raw_stock\": -2407,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 6,\n                \"raw_name\": \"Susu Cair\",\n                \"raw_stock\": 15000,\n                \"raw_unit\": \"ml\"\n            },\n            {\n                \"raw_id\": 7,\n                \"raw_name\": \"Air Mineral\",\n                \"raw_stock\": 49468,\n                \"raw_unit\": \"ml\"\n            },\n            {\n                \"raw_id\": 8,\n                \"raw_name\": \"Sirup Vanilla\",\n                \"raw_stock\": 5000,\n                \"raw_unit\": \"ml\"\n            },\n            {\n                \"raw_id\": 9,\n                \"raw_name\": \"Susu Kental\",\n                \"raw_stock\": 3000,\n                \"raw_unit\": \"ml\"\n            },\n            {\n                \"raw_id\": 10,\n                \"raw_name\": \"Kopi Hitam Updated\",\n                \"raw_stock\": 2000,\n                \"raw_unit\": \"gr\"\n            },\n            {\n                \"raw_id\": 11,\n                \"raw_name\": \"Coklat Merah\",\n                \"raw_stock\": 99999,\n                \"raw_unit\": \"ml\"\n            },\n            {\n                \"raw_id\": 12,\n                \"raw_name\": \"Test Final\",\n                \"raw_stock\": 998,\n                \"raw_unit\": \"gr\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/raws?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/raws?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/raws?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://127.0.0.1:8000/api/raws\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 12,\n        \"total\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/categories/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/raws/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:18:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"raw_id\": 1,\n        \"raw_name\": \"Coffee\",\n        \"raw_stock\": 10,\n        \"raw_unit\": \"gr\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "raw_name",
+									"value": "Coffee",
+									"type": "text"
+								},
+								{
+									"key": "raw_stock",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "raw_unit",
+									"value": "ml",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/raws"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "raw_name",
+											"value": "Coffee",
+											"type": "text"
+										},
+										{
+											"key": "raw_stock",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "raw_unit",
+											"value": "ml",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/raws"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:17:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"raw_name\": \"Coffee\",\n        \"raw_stock\": 12,\n        \"raw_unit\": \"ml\",\n        \"raw_id\": 14\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"raw_name\":\"Coffee\",\r\n    \"raw_stock\":10,\r\n    \"raw_unit\":\"gr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/raws/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"raw_name\":\"Coffee\",\r\n    \"raw_stock\":10,\r\n    \"raw_unit\":\"gr\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/raws/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:18:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"raw_id\": 1,\n        \"raw_name\": \"Coffee\",\n        \"raw_stock\": 10,\n        \"raw_unit\": \"gr\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/categories/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/raws/8"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:19:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": \"Deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/products"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/products"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:19:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"product_id\": 2,\n                \"product_name\": \"Kopi Hitam Updated\",\n                \"product_image\": \"/storage/products/2.png\",\n                \"product_price\": 12002,\n                \"product_size\": \"large\",\n                \"is_hot\": true,\n                \"is_active\": true,\n                \"category_id\": 2,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 9,\n                        \"recipe_qty\": 284,\n                        \"product_id\": 2,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 13,\n                        \"recipe_qty\": 113,\n                        \"product_id\": 2,\n                        \"raw_id\": 2,\n                        \"raw\": {\n                            \"raw_id\": 2,\n                            \"raw_name\": \"Kopi Bubuk\",\n                            \"raw_stock\": 9109,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 18,\n                        \"recipe_qty\": 265,\n                        \"product_id\": 2,\n                        \"raw_id\": 2,\n                        \"raw\": {\n                            \"raw_id\": 2,\n                            \"raw_name\": \"Kopi Bubuk\",\n                            \"raw_stock\": 9109,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 3,\n                \"product_name\": \"Kopi Hitam\",\n                \"product_image\": \"/images/coffee1.png\",\n                \"product_price\": 15000,\n                \"product_size\": \"large\",\n                \"is_hot\": true,\n                \"is_active\": true,\n                \"category_id\": 1,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 3,\n                        \"recipe_qty\": 280,\n                        \"product_id\": 3,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 17,\n                        \"recipe_qty\": 32,\n                        \"product_id\": 3,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 23,\n                        \"recipe_qty\": 314,\n                        \"product_id\": 3,\n                        \"raw_id\": 4,\n                        \"raw\": {\n                            \"raw_id\": 4,\n                            \"raw_name\": \"Teh Hitam\",\n                            \"raw_stock\": 4214,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 4,\n                \"product_name\": \"Es Kopi Susu\",\n                \"product_image\": \"/storage/products/4.png\",\n                \"product_price\": 15000,\n                \"product_size\": \"large\",\n                \"is_hot\": false,\n                \"is_active\": true,\n                \"category_id\": 2,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 22,\n                        \"recipe_qty\": 468,\n                        \"product_id\": 4,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 47,\n                        \"recipe_qty\": 90,\n                        \"product_id\": 4,\n                        \"raw_id\": 10,\n                        \"raw\": {\n                            \"raw_id\": 10,\n                            \"raw_name\": \"Kopi Hitam Updated\",\n                            \"raw_stock\": 2000,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 5,\n                \"product_name\": \"Es Kopi Susu\",\n                \"product_image\": \"/images/logo.png\",\n                \"product_price\": 18000,\n                \"product_size\": \"large\",\n                \"is_hot\": false,\n                \"is_active\": true,\n                \"category_id\": 1,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 2,\n                        \"recipe_qty\": 108,\n                        \"product_id\": 5,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 19,\n                        \"recipe_qty\": 161,\n                        \"product_id\": 5,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 20,\n                        \"recipe_qty\": 414,\n                        \"product_id\": 5,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 21,\n                        \"recipe_qty\": 12,\n                        \"product_id\": 5,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 6,\n                \"product_name\": \"Teh Manis\",\n                \"product_image\": \"/images/food1.png\",\n                \"product_price\": 8000,\n                \"product_size\": \"small\",\n                \"is_hot\": true,\n                \"is_active\": true,\n                \"category_id\": 1,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 7,\n                        \"recipe_qty\": 307,\n                        \"product_id\": 6,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 14,\n                        \"recipe_qty\": 348,\n                        \"product_id\": 6,\n                        \"raw_id\": 4,\n                        \"raw\": {\n                            \"raw_id\": 4,\n                            \"raw_name\": \"Teh Hitam\",\n                            \"raw_stock\": 4214,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 8,\n                \"product_name\": \"Coklat Panas\",\n                \"product_image\": \"/images/food1.png\",\n                \"product_price\": 13000,\n                \"product_size\": \"medium\",\n                \"is_hot\": true,\n                \"is_active\": true,\n                \"category_id\": 1,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 8,\n                        \"recipe_qty\": 83,\n                        \"product_id\": 8,\n                        \"raw_id\": 2,\n                        \"raw\": {\n                            \"raw_id\": 2,\n                            \"raw_name\": \"Kopi Bubuk\",\n                            \"raw_stock\": 9109,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 12,\n                        \"recipe_qty\": 435,\n                        \"product_id\": 8,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 16,\n                        \"recipe_qty\": 412,\n                        \"product_id\": 8,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 13,\n                \"product_name\": \"final test\",\n                \"product_image\": \"/storage/products/13.png\",\n                \"product_price\": 12,\n                \"product_size\": \"medium\",\n                \"is_hot\": false,\n                \"is_active\": true,\n                \"category_id\": 2,\n                \"recipes\": [],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 16,\n                \"product_name\": \"Test Update\",\n                \"product_image\": \"/storage/products/16.png\",\n                \"product_price\": 25,\n                \"product_size\": \"medium\",\n                \"is_hot\": true,\n                \"is_active\": true,\n                \"category_id\": 1,\n                \"recipes\": [],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 1,\n                \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n                \"product_image\": \"/storage/products/1.png\",\n                \"product_price\": 10011,\n                \"product_size\": \"small\",\n                \"is_hot\": true,\n                \"is_active\": false,\n                \"category_id\": 2,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 35,\n                        \"recipe_qty\": 12,\n                        \"product_id\": 1,\n                        \"raw_id\": 4,\n                        \"raw\": {\n                            \"raw_id\": 4,\n                            \"raw_name\": \"Teh Hitam\",\n                            \"raw_stock\": 4214,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 38,\n                        \"recipe_qty\": 12,\n                        \"product_id\": 1,\n                        \"raw_id\": 4,\n                        \"raw\": {\n                            \"raw_id\": 4,\n                            \"raw_name\": \"Teh Hitam\",\n                            \"raw_stock\": 4214,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 39,\n                        \"recipe_qty\": 2,\n                        \"product_id\": 1,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 40,\n                        \"recipe_qty\": 5,\n                        \"product_id\": 1,\n                        \"raw_id\": 2,\n                        \"raw\": {\n                            \"raw_id\": 2,\n                            \"raw_name\": \"Kopi Bubuk\",\n                            \"raw_stock\": 9109,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 41,\n                        \"recipe_qty\": 8,\n                        \"product_id\": 1,\n                        \"raw_id\": 1,\n                        \"raw\": {\n                            \"raw_id\": 1,\n                            \"raw_name\": \"Coffee\",\n                            \"raw_stock\": 10,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 42,\n                        \"recipe_qty\": 2,\n                        \"product_id\": 1,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 43,\n                        \"recipe_qty\": 2,\n                        \"product_id\": 1,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 7,\n                \"product_name\": \"Es Teh Manis\",\n                \"product_image\": \"/images/food1.png\",\n                \"product_price\": 10000,\n                \"product_size\": \"medium\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 1,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 1,\n                        \"recipe_qty\": 3,\n                        \"product_id\": 7,\n                        \"raw_id\": 3,\n                        \"raw\": {\n                            \"raw_id\": 3,\n                            \"raw_name\": \"Coklat Bubuk\",\n                            \"raw_stock\": 5600,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 4,\n                        \"recipe_qty\": 88,\n                        \"product_id\": 7,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 5,\n                        \"recipe_qty\": 480,\n                        \"product_id\": 7,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 24,\n                        \"recipe_qty\": 383,\n                        \"product_id\": 7,\n                        \"raw_id\": 4,\n                        \"raw\": {\n                            \"raw_id\": 4,\n                            \"raw_name\": \"Teh Hitam\",\n                            \"raw_stock\": 4214,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 9,\n                \"product_name\": \"Coklat Dingin\",\n                \"product_image\": \"/images/food1.png\",\n                \"product_price\": 15000,\n                \"product_size\": \"large\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 1,\n                \"recipes\": [],\n                \"category\": {\n                    \"category_id\": 1,\n                    \"category_name\": \"Food\"\n                }\n            },\n            {\n                \"product_id\": 10,\n                \"product_name\": \"Test Input\",\n                \"product_image\": \"/storage/products/10.png\",\n                \"product_price\": 10,\n                \"product_size\": \"medium\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 2,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 44,\n                        \"recipe_qty\": 11,\n                        \"product_id\": 10,\n                        \"raw_id\": 2,\n                        \"raw\": {\n                            \"raw_id\": 2,\n                            \"raw_name\": \"Kopi Bubuk\",\n                            \"raw_stock\": 9109,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 11,\n                \"product_name\": \"adadad\",\n                \"product_image\": \"products/11.png\",\n                \"product_price\": 7,\n                \"product_size\": \"small\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 2,\n                \"recipes\": [],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 12,\n                \"product_name\": \"12\",\n                \"product_image\": \"/products/12.png\",\n                \"product_price\": 12,\n                \"product_size\": \"medium\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 2,\n                \"recipes\": [],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            },\n            {\n                \"product_id\": 14,\n                \"product_name\": \"Test\",\n                \"product_image\": \"/storage/products/14.png\",\n                \"product_price\": 9999,\n                \"product_size\": \"large\",\n                \"is_hot\": false,\n                \"is_active\": false,\n                \"category_id\": 2,\n                \"recipes\": [\n                    {\n                        \"recipe_id\": 45,\n                        \"recipe_qty\": 133,\n                        \"product_id\": 14,\n                        \"raw_id\": 7,\n                        \"raw\": {\n                            \"raw_id\": 7,\n                            \"raw_name\": \"Air Mineral\",\n                            \"raw_stock\": 49468,\n                            \"raw_unit\": \"ml\"\n                        }\n                    },\n                    {\n                        \"recipe_id\": 46,\n                        \"recipe_qty\": 123,\n                        \"product_id\": 14,\n                        \"raw_id\": 5,\n                        \"raw\": {\n                            \"raw_id\": 5,\n                            \"raw_name\": \"Es Batu\",\n                            \"raw_stock\": -2407,\n                            \"raw_unit\": \"gr\"\n                        }\n                    }\n                ],\n                \"category\": {\n                    \"category_id\": 2,\n                    \"category_name\": \"Snacks\"\n                }\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://127.0.0.1:8000/api/products?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/products?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/products?page=2\",\n                \"label\": \"2\",\n                \"page\": 2,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/products?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"page\": 2,\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8000/api/products?page=2\",\n        \"path\": \"http://127.0.0.1:8000/api/products\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 21\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/products/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/products/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:20:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"product_id\": 1,\n        \"product_name\": \"Kopi Hitam Updated Mwhehe\",\n        \"product_image\": \"/storage/products/1.png\",\n        \"product_price\": 10011,\n        \"product_size\": \"small\",\n        \"is_hot\": true,\n        \"is_active\": false,\n        \"category_id\": 2,\n        \"category\": {\n            \"category_id\": 2,\n            \"category_name\": \"Snacks\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Latte Coffee",
+									"type": "text"
+								},
+								{
+									"key": "product_price",
+									"value": "8000",
+									"type": "text"
+								},
+								{
+									"key": "product_size",
+									"value": "MEDIUM",
+									"type": "text"
+								},
+								{
+									"key": "is_hot",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/C:/Users/haryodarma/Downloads/univ-ubg.jpg"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/products"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_name",
+											"value": "Latte Coffee",
+											"type": "text"
+										},
+										{
+											"key": "product_price",
+											"value": "8000",
+											"type": "text"
+										},
+										{
+											"key": "product_size",
+											"value": "MEDIUM",
+											"type": "text"
+										},
+										{
+											"key": "is_hot",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/C:/Users/haryodarma/Downloads/WhatsApp Image 2026-01-05 at 12.31.57 AM.jpeg"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/products"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:21:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"product_name\": \"Latte Coffee\",\n        \"product_image\": \"/storage/products/23.png\",\n        \"product_price\": 8000,\n        \"product_size\": \"MEDIUM\",\n        \"category_id\": 1,\n        \"is_hot\": false,\n        \"is_active\": false,\n        \"product_id\": 23\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Latte Coffee",
+									"type": "text"
+								},
+								{
+									"key": "product_price",
+									"value": "8000",
+									"type": "text"
+								},
+								{
+									"key": "product_size",
+									"value": "MEDIUM",
+									"type": "text"
+								},
+								{
+									"key": "is_hot",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/C:/Users/haryodarma/Downloads/ChatGPT Image Dec 5, 2025, 07_56_20 AM.png"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/products"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_name",
+											"value": "Latte Coffee",
+											"type": "text"
+										},
+										{
+											"key": "product_price",
+											"value": "8000",
+											"type": "text"
+										},
+										{
+											"key": "product_size",
+											"value": "MEDIUM",
+											"type": "text"
+										},
+										{
+											"key": "is_hot",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/C:/Users/haryodarma/Downloads/ChatGPT Image Dec 5, 2025, 07_56_20 AM.png"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/products/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:23:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"product_id\": 1,\n        \"product_name\": \"Latte Coffee\",\n        \"product_image\": \"/storage/products/1.png\",\n        \"product_price\": 8000,\n        \"product_size\": \"MEDIUM\",\n        \"is_hot\": false,\n        \"is_active\": true,\n        \"category_id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_name",
+									"value": "Coffee",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/products/1"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/products/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:23:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Deleted Successfully.\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "owner",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/login"
+					},
+					"response": [
+						{
+							"name": "Success To Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "owner",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:06:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY3NTY0MzgwLCJleHAiOjE3Njc1Njc5ODAsIm5iZiI6MTc2NzU2NDM4MCwianRpIjoiTkw4T3dDakI2NEl3VHoweCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwibmFtZSI6bnVsbCwiZW1haWwiOiJvd25lckBhbW9yLnRlc3QiLCJyb2xlIjoib3duZXIiLCJsb2dpbl9hdCI6MTc2NzU2NDM3OX0.-D6h-kAeugLQW3gE6JnP8oFQxZllcveGZaDYKySWeBo\"\n    }\n}"
+						},
+						{
+							"name": "Wrong Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "owner",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "passwor",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/login"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:06:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\",\n    \"errors\": 401\n}"
+						}
+					]
+				},
+				{
+					"name": "refreshToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "owner",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/refresh-token"
+					},
+					"response": [
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "owner",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/refresh-token"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:07:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Token Signature could not be verified.\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "owner",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/refresh-token"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 22:17:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZnJlc2gtdG9rZW4iLCJpYXQiOjE3Njc1NjQ1OTQsImV4cCI6MTc2NzU2ODYyOCwibmJmIjoxNzY3NTY1MDI4LCJqdGkiOiJCVk94Q2lkdjFnYm0xclBMIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJuYW1lIjpudWxsLCJlbWFpbCI6Im93bmVyQGFtb3IudGVzdCIsInJvbGUiOiJvd25lciIsImxvZ2luX2F0IjoxNzY3NTY0NTkzfQ.9lAFUp199sEBvAwwEQBEwli2m5xc9R2WbC55L5yJyo4\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Unauthorized Scenario",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "Coffee",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{baseUrl}}/api/products/1"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "www-authenticate",
+									"value": "jwt-auth"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Sun, 04 Jan 2026 22:24:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <title>Unauthorized</title>\n        <style>\n            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}code{font-family:monospace,monospace;font-size:1em}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}code{font-family:Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-gray-400{--border-opacity:1;border-color:#cbd5e0;border-color:rgba(203,213,224,var(--border-opacity))}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-xl{max-width:36rem}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.uppercase{text-transform:uppercase}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.tracking-wider{letter-spacing:.05em}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@-webkit-keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@-webkit-keyframes ping{0%{transform:scale(1);opacity:1}75%,to{transform:scale(2);opacity:0}}@keyframes ping{0%{transform:scale(1);opacity:1}75%,to{transform:scale(2);opacity:0}}@-webkit-keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}@keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}@-webkit-keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:translateY(0);-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:translateY(0);-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@media (min-width:640px){.sm\\:rounded-lg{border-radius:.5rem}.sm\\:block{display:block}.sm\\:items-center{align-items:center}.sm\\:justify-start{justify-content:flex-start}.sm\\:justify-between{justify-content:space-between}.sm\\:h-20{height:5rem}.sm\\:ml-0{margin-left:0}.sm\\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\\:pt-0{padding-top:0}.sm\\:text-left{text-align:left}.sm\\:text-right{text-align:right}}@media (min-width:768px){.md\\:border-t-0{border-top-width:0}.md\\:border-l{border-left-width:1px}.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\\:text-gray-300 { --text-opacity: 1; color: #e2e8f0; color: rgba(226,232,240,var(--text-opacity)) }}\n        </style>\n        <style>\n            body {\n                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n            }\n        </style>\n    </head>\n    <body class=\"antialiased\">\n        <div class=\"relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0\" role=\"main\">\n            <div class=\"max-w-xl mx-auto sm:px-6 lg:px-8\">\n                <div class=\"flex items-center pt-8 sm:justify-start sm:pt-0\">\n                    <h1 class=\"px-4 text-lg dark:text-gray-300 text-gray-700 border-r border-gray-400 tracking-wider\">\n                        401                    </h1>\n                    <div class=\"ml-4 text-lg dark:text-gray-300 text-gray-700 uppercase tracking-wider\">\n                        Unauthorized                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n</html>"
+						}
+					]
+				}
+			]
+		}
+	]
+}
