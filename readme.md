@@ -1,4 +1,4 @@
-![Tampilan Aplikasi](assets/logo.png)
+<img src="assets/logo.png" alt="Tampilan Aplikasi" width="300"/>
 
 # ☕ Sistem Kasir Kedai Amor
 
