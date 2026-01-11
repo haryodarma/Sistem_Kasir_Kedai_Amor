@@ -1,3 +1,5 @@
+![Tampilan Aplikasi](assets/logo.png)
+
 # ☕ Sistem Kasir Kedai Amor
 
 ## Deskripsi Singkat :
@@ -21,7 +23,8 @@ git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git
 ### 4. Pindah ke folder frontend
 
 ### 5. Install package di folder frontend
-##### *Sesuiakan dengan node package manager yang anda gunakan
+
+##### \*Sesuiakan dengan node package manager yang anda gunakan
 
 ```bash
 pnpm install
@@ -77,7 +80,8 @@ php artisan serve
 ```
 
 ### 14. Jalankan kode ini di folder frontend untuk menjalankan frontend
-##### *Sesuiakan dengan node package manager yang anda gunakan
+
+##### \*Sesuiakan dengan node package manager yang anda gunakan
 
 ```bash
 npm run build
@@ -243,4 +247,3 @@ pnpm run build
 ## Dokumentasi API :
 
 ### Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut https://documenter.getpostman.com/view/33379055/2sBXVcmYWs
-
