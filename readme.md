@@ -21,14 +21,7 @@ git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git
 ### 4. Pindah ke folder frontend
 
 ### 5. Install package di folder frontend
-
-Jika menggunakan pnpm :
-
-```bash
-pnpm install
-```
-
-Jika menggunakan npm :
+##### *Sesuiakan dengan node package manager yang anda gunakan
 
 ```bash
 pnpm install
@@ -84,10 +77,11 @@ php artisan serve
 ```
 
 ### 14. Jalankan kode ini di folder frontend untuk menjalankan frontend
+##### *Sesuiakan dengan node package manager yang anda gunakan
 
 ```bash
-pnpm run build
-pnpm run build
+npm run build
+npm run build
 ```
 
 ## B. Sistem Customer
