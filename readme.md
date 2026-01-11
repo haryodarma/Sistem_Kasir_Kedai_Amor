@@ -254,7 +254,7 @@ pnpm run build
 ## API Endpoints
 
 
-```md
+
 | Method | Endpoint           | Deskripsi                     | Auth |
 |--------|--------------------|-------------------------------|------|
 | POST   | /api/login         | Login user                    | ❌   |
@@ -263,4 +263,4 @@ pnpm run build
 | POST   | /api/products      | Menambahkan produk baru       | ✅   |
 | PUT    | /api/products/:id  | Update data produk            | ✅   |
 | DELETE | /api/products/:id  | Hapus produk                  | ✅   |
-```
+
