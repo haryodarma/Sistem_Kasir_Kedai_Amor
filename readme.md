@@ -1,7 +1,9 @@
 # ☕ Sistem Kasir Kedai Amor
 
-<img src="assets/logo.png" alt="Tampilan Aplikasi" width="300"/>
-Logo Kedai Amore
+<div align="center">
+  <img src="assets/logo.png" alt="Logo Kedai Amore" width="300"/>
+  <h3>Logo Kedai Amor</h3>
+</div>
 
 ## Deskripsi Singkat :
 
