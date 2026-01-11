@@ -1,45 +1,252 @@
-<h1>Judul Proyek : </h1>
-<p>Sistem Kasir Kedai Amor</p>
+# ☕ Sistem Kasir Kedai Amor
 
-<h1>Deskripsi Singkat : </h1>
-<p>Membuat sistem kasir untuk sebuah kedai disebuah desa dengan tujuan mempermudah transaksi dan management</p>
+## Deskripsi Singkat :
 
-<h1>Cara Menjalankan Sistem : </h1>
-<h2>A. Setup Project</h2>
-<p>1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project. ex: git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git</p>
-<p>2. Buka project di vs code</p>
-<p>3. Buka terminal di vs code</p>
-<p>4. Pindah ke folder frontend</p>
-<p>5. Install package di folder frontend. ex: pnpm run dev (sesuiakan dengan package manager yang anda gunakan)</p>
-<p>6. Pindah ke folder backend</p>
-<p>7. Install package di folder backend. ex: composer install</p>
-<p>8. Buat file .env</p>
-<p>9. Copy semua isi file di .env.example</p>
-<p>10. Paste ke dalam file .env</p>
-<p>11. Sesuaikan variable Database dengan database yang anda gunakan</p>
-<p>12. Jalankan "php artisan jwt:secret" untuk generate key jwt</p>
-<p>13. Jalankan "php artisan storage:link" untuk menghubungkan folder /storage/public ke folder /public</p>
-<p>14. Jalankan backend dengan "php artisan serve" di folder backend</p>
-<p>15. Jalankan frontend dengan "pnpm run dev" di folder frontend</p>
+### Membuat sistem kasir untuk sebuah kedai disebuah desa dengan tujuan mempermudah transaksi dan management
 
-<h2>B. Sistem Customer</h2>
-<p>1. Tekan button mulai untuk masuk ke bagian customer</p>
-<p>2. Tambahkan beberapa product ke bagian order</p>
-<p>3. Lakukan checkout</p>
+## ⚙️ Cara Menjalankan Sistem :
 
-<h2>C. Sistem Admin (CMS)</h2>
-<p>1. Tekan button login</p>
-<p>2. Masukan username dan password yang sudah terdaftar</p>
-<p>3. Pada bagian sidebar ada beberapa menu seperti bagian transaksi, bagian product, dan bagian lainnya</p>
-<p>4. Pada setiap sub bagian didalamnya telah disediakan table yang berisi data dan button add, update dan delete</p>
+### A. Setup Project
 
-<h2>D. Catatan</h2>
-<p>1. Pada bagian transaksi user hanya dapat melakukan update status transaksi untuk keamanan bahwa transaksi yang telah terjadi tidak dapat dihapus dan diubah</p>
+### 1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project
 
-<h1>Informasi Akun Uji Coba :</h1>
-<h2>Login sebagain admin</h2>
-<p>Username : owner</p>
-<p>Password : password</p>
+```bash
+git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git
+```
 
-<h1>Dokumentasi API :</h1>
-<p>Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut http://localhost:3000</p>
+### 2. Buka project di vs code
+
+### 3. Buka terminal di vs code
+
+### 4. Pindah ke folder frontend
+
+### 5. Install package di folder frontend
+
+Jika menggunakan pnpm :
+
+```bash
+pnpm install
+```
+
+Jika menggunakan npm :
+
+```bash
+pnpm install
+```
+
+### 6. Pindah ke folder backend
+
+### 7. Install package di folder backend
+
+```bash
+composer install
+```
+
+### 8. Buat file .env
+
+```bash
+touch .env
+```
+
+### 9. Copy semua isi file di .env.example ke .env
+
+```bash
+cp .env.example .env
+```
+
+### 10. Sesuaikan variable Database dengan database yang anda gunakan
+
+```makefile
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 11. Jalankan kode ini untuk generate key jwt
+
+```bash
+php artisan key:generate
+```
+
+### 12. Jalankan kode ini untuk menghubungkan folder /storage/public ke folder /public
+
+```bash
+php artisan storage:link
+```
+
+### 13. Jalankan kode ini di folder backend untuk menjalankan backend
+
+```bash
+php artisan serve
+```
+
+### 14. Jalankan kode ini di folder frontend untuk menjalankan frontend
+
+```bash
+pnpm run build
+pnpm run build
+```
+
+## B. Sistem Customer
+
+### 1. Tekan button mulai untuk masuk ke bagian customer
+
+### 2. Tambahkan beberapa product ke bagian order
+
+### 3. Lakukan checkout
+
+## C. Sistem Admin (CMS)
+
+### 1. Tekan button login
+
+### 2. Masukan username dan password yang sudah terdaftar
+
+### 3. Pada bagian sidebar ada beberapa menu seperti bagian transaksi, bagian product, dan bagian lainnya
+
+### 4. Pada setiap sub bagian didalamnya telah disediakan table yang berisi data dan button add, update dan delete
+
+## D. Catatan
+
+### 1. Pada bagian transaksi user hanya dapat melakukan update status transaksi untuk keamanan bahwa transaksi yang telah terjadi tidak dapat dihapus dan diubah
+
+## Informasi Akun Uji Coba :
+
+```json
+{
+  "username": "owner",
+  "password": "password"
+}
+```
+
+## Dokumentasi API :
+
+### Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut # ☕ Sistem Kasir Kedai Amor
+
+## Deskripsi Singkat :
+
+### Membuat sistem kasir untuk sebuah kedai disebuah desa dengan tujuan mempermudah transaksi dan management
+
+## ⚙️ Cara Menjalankan Sistem :
+
+### A. Setup Project
+
+### 1. Clone repository dari terminal dan pastikan sudah ada dilokasi menyimpan project
+
+```bash
+git clone https://github.com/haryodarma/Sistem_Kasir_Kedai_Amor.git
+```
+
+### 2. Buka project di vs code
+
+### 3. Buka terminal di vs code
+
+### 4. Pindah ke folder frontend
+
+### 5. Install package di folder frontend
+
+Jika menggunakan pnpm :
+
+```bash
+pnpm install
+```
+
+Jika menggunakan npm :
+
+```bash
+pnpm install
+```
+
+### 6. Pindah ke folder backend
+
+### 7. Install package di folder backend
+
+```bash
+composer install
+```
+
+### 8. Buat file .env
+
+```bash
+touch .env
+```
+
+### 9. Copy semua isi file di .env.example ke .env
+
+```bash
+cp .env.example .env
+```
+
+### 10. Sesuaikan variable Database dengan database yang anda gunakan
+
+```makefile
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 11. Jalankan kode ini untuk generate key jwt
+
+```bash
+php artisan key:generate
+```
+
+### 12. Jalankan kode ini untuk menghubungkan folder /storage/public ke folder /public
+
+```bash
+php artisan storage:link
+```
+
+### 13. Jalankan kode ini di folder backend untuk menjalankan backend
+
+```bash
+php artisan serve
+```
+
+### 14. Jalankan kode ini di folder frontend untuk menjalankan frontend
+
+```bash
+pnpm run build
+pnpm run build
+```
+
+## B. Sistem Customer
+
+### 1. Tekan button mulai untuk masuk ke bagian customer
+
+### 2. Tambahkan beberapa product ke bagian order
+
+### 3. Lakukan checkout
+
+## C. Sistem Admin (CMS)
+
+### 1. Tekan button login
+
+### 2. Masukan username dan password yang sudah terdaftar
+
+### 3. Pada bagian sidebar ada beberapa menu seperti bagian transaksi, bagian product, dan bagian lainnya
+
+### 4. Pada setiap sub bagian didalamnya telah disediakan table yang berisi data dan button add, update dan delete
+
+## D. Catatan
+
+### 1. Pada bagian transaksi user hanya dapat melakukan update status transaksi untuk keamanan bahwa transaksi yang telah terjadi tidak dapat dihapus dan diubah
+
+## Informasi Akun Uji Coba :
+
+```json
+{
+  "username": "owner",
+  "password": "password"
+}
+```
+
+## Dokumentasi API :
+
+### Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut https://documenter.getpostman.com/view/33379055/2sBXVcmYWs
+
