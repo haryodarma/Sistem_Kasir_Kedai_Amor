@@ -2,8 +2,8 @@
 
 <p align="center">
   <img src="assets/logo.png" alt="Logo Kedai Amore" width="300"/>
-  <h3>Logo Kedai Amor</h3>
 </p>
+  <p align="center">< Logo Kedai Amor ></p>
 
 ## Deskripsi Singkat :
 
