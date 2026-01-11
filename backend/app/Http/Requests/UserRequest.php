@@ -24,16 +24,15 @@ class UserRequest extends FormRequest
         $rules = [
             "username" => "required|string|max:255|unique:users,username",
             "email" => "required|email|max:255|unique:users,email",
-            "password" => "required|string|min:6|confirmed",
-            "role" => "required|in:admin,cashier,customer",
-            "phone" => "required|string|max:20",
+            "password" => "required|string|min:6",
+            "role" => "required|in:owner,customer",
         ];
-        if ($this->isMethod('put')) {
-            $rules['username'] = 'sometimes|' . $rules['username'] . ',' . $this->user->id;
-            $rules['email'] = 'sometimes|' . $rules['email'] . ',' . $this->user->id;
-            $rules['password'] = 'sometimes|' . $rules['password'];
-            $rules['role'] = 'sometimes|' . $rules['role'];
-            $rules['phone'] = 'sometimes|' . $rules['phone'];
+        if ($this->isMethod('PATCH')) {
+          
+            $rules['username'] = "sometimes|string|max:255" ;
+            $rules['email'] = "sometimes|email|max:255";
+            $rules['password'] ="sometimes|string|min:6";
+            $rules['role'] = "sometimes|in:owner,customer";  
         }
         return $rules;
     }

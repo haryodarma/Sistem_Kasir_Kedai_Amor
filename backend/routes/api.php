@@ -8,6 +8,7 @@ use App\Http\Controllers\RawController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
 use App\Http\Helpers\ResponseFormat;
 use App\Models\Product;
 use App\Models\Transaction;
@@ -20,6 +21,8 @@ Route::get('refresh-token', [AuthController::class, 'refreshToken']);
 
 Route::middleware(['jwt.auth'])->group(function () {
     Route::get('/auth/check', [AuthController::class, 'checkCredentials']);
+
+    Route::resource("users", UserController::class);
 
     Route::resource("categories", CategoryController::class);
     Route::resource("logs", LogController::class);
