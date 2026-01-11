@@ -1,6 +1,7 @@
 # ☕ Sistem Kasir Kedai Amor
 
 <img src="assets/logo.png" alt="Tampilan Aplikasi" width="300"/>
+Logo Kedai Amore
 
 ## Deskripsi Singkat :
 
