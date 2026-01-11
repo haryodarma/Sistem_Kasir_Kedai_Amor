@@ -250,3 +250,17 @@ pnpm run build
 ## Dokumentasi API :
 
 ### Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut https://documenter.getpostman.com/view/33379055/2sBXVcmYWs
+
+## API Endpoints
+
+
+```md
+| Method | Endpoint           | Deskripsi                     | Auth |
+|--------|--------------------|-------------------------------|------|
+| POST   | /api/login         | Login user                    | ❌   |
+| POST   | /api/register      | Registrasi user baru          | ❌   |
+| GET    | /api/products      | Mengambil semua produk        | ✅   |
+| POST   | /api/products      | Menambahkan produk baru       | ✅   |
+| PUT    | /api/products/:id  | Update data produk            | ✅   |
+| DELETE | /api/products/:id  | Hapus produk                  | ✅   |
+```
