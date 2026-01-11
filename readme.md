@@ -251,16 +251,60 @@ pnpm run build
 
 ### Berikut adalah dokementasi API dari Sistem Aplikasi Kedai Amor yang dapat diakses melalui link berikut https://documenter.getpostman.com/view/33379055/2sBXVcmYWs
 
-## API Endpoints
+## Daftar Enpoint API
 
+| Method             | Endpoint                        | Description                  | Auth |
+| ------------------ | ------------------------------- | ---------------------------- | ---- |
+| **Authentication** |                                 |                              |      |
+| POST               | `/register`                     | Register user baru           | ❌    |
+| POST               | `/login`                        | Login user                   | ❌    |
+| GET                | `/refresh-token`                | Refresh access token         | ❌    |
+| POST               | `/logout`                       | Logout user                  | ✅    |
+| GET                | `/auth/check`                   | Cek kredensial user          | ✅    |
+| **Users**          |                                 |                              |      |
+| GET                | `/users`                        | List semua user              | ✅    |
+| POST               | `/users`                        | Buat user baru               | ✅    |
+| GET                | `/users/{id}`                   | Detail user                  | ✅    |
+| PUT                | `/users/{id}`                   | Update user                  | ✅    |
+| DELETE             | `/users/{id}`                   | Hapus user                   | ✅    |
+| **Categories**     |                                 |                              |      |
+| GET                | `/categories`                   | List semua kategori          | ✅    |
+| POST               | `/categories`                   | Buat kategori                | ✅    |
+| GET                | `/categories/{id}`              | Detail kategori              | ✅    |
+| PUT                | `/categories/{id}`              | Update kategori              | ✅    |
+| DELETE             | `/categories/{id}`              | Hapus kategori               | ✅    |
+| **Logs**           |                                 |                              |      |
+| GET                | `/logs`                         | List log                     | ✅    |
+| POST               | `/logs`                         | Buat log                     | ✅    |
+| GET                | `/logs/{id}`                    | Detail log                   | ✅    |
+| PUT                | `/logs/{id}`                    | Update log                   | ✅    |
+| DELETE             | `/logs/{id}`                    | Hapus log                    | ✅    |
+| **Products**       |                                 |                              |      |
+| GET                | `/products`                     | List semua produk            | ✅    |
+| POST               | `/products`                     | Tambah produk                | ✅    |
+| GET                | `/products/{id}`                | Detail produk                | ✅    |
+| PUT                | `/products/{id}`                | Update produk                | ✅    |
+| DELETE             | `/products/{id}`                | Hapus produk                 | ✅    |
+| **Transactions**   |                                 |                              |      |
+| GET                | `/transactions`                 | List transaksi               | ✅    |
+| POST               | `/transactions`                 | Buat transaksi               | ✅    |
+| GET                | `/transactions/{id}`            | Detail transaksi             | ✅    |
+| PUT                | `/transactions/{id}`            | Update transaksi             | ✅    |
+| DELETE             | `/transactions/{id}`            | Hapus transaksi              | ✅    |
+| **Recipes**        |                                 |                              |      |
+| GET                | `/recipes`                      | List semua resep             | ✅    |
+| POST               | `/recipes`                      | Buat resep                   | ✅    |
+| GET                | `/recipes/{id}`                 | Detail resep                 | ✅    |
+| PUT                | `/recipes/{id}`                 | Update resep                 | ✅    |
+| DELETE             | `/recipes/{id}`                 | Hapus resep                  | ✅    |
+| GET                | `/recipes/product/{product_id}` | Resep berdasarkan produk     | ✅    |
+| **Raws**           |                                 |                              |      |
+| GET                | `/raws`                         | List bahan baku              | ✅    |
+| POST               | `/raws`                         | Tambah bahan baku            | ✅    |
+| GET                | `/raws/{id}`                    | Detail bahan baku            | ✅    |
+| PUT                | `/raws/{id}`                    | Update bahan baku            | ✅    |
+| DELETE             | `/raws/{id}`                    | Hapus bahan baku             | ✅    |
+| **Summary**        |                                 |                              |      |
+| GET                | `/summary`                      | Ringkasan transaksi & produk | ✅    |
 
-
-| Method | Endpoint           | Deskripsi                     | Auth |
-|--------|--------------------|-------------------------------|------|
-| POST   | /api/login         | Login user                    | ❌   |
-| POST   | /api/register      | Registrasi user baru          | ❌   |
-| GET    | /api/products      | Mengambil semua produk        | ✅   |
-| POST   | /api/products      | Menambahkan produk baru       | ✅   |
-| PUT    | /api/products/:id  | Update data produk            | ✅   |
-| DELETE | /api/products/:id  | Hapus produk                  | ✅   |
 
